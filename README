@@ -1,0 +1,11 @@
+This is a Java program with associated Perl utilities for managing my
+photos.  It used to be written entirely in Perl, but then my Windows
+Vista machine, upon which I ran this, totally crashed and I
+re-installed it with Windows 7 (hurrah!).  However, I don't want to
+install Perl on it and instead wanted to run my photograph stuff on my
+mac, so I re-wrote most of the functionality in Java.  However, the
+web site that shows the photos still uses Perl and I put all the EXIF
+data in a Perl hash, so I still need to generate that using Perl.  I
+set the timestamps using Perl merely because I know how to do it in
+Perl; maybe I'll re-write that in Java someday.  All the photograph
+resizing is now done in Java, and I'm free of Image::Magick at last.
