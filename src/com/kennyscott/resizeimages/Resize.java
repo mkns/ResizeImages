@@ -147,19 +147,25 @@ public class Resize {
 		File myFile = new File( PHOTODIR + month + "/" + image );
 		File ofName = new File( WWWDIR + month + "/" + image );
 		BufferedImage inputImage = ImageIO.read( myFile );
-		
-		if (inputImage == null ) {
+
+		if ( inputImage == null ) {
 			// probably because it isn't an image
 			return;
 		}
-		
+
 		int height = inputImage.getHeight();
 		int width = inputImage.getWidth();
 		log( "OLD: Height: " + height + " Width: " + width );
 
 		int newWidth = 0, newHeight = 0;
-		newWidth = 800;
-		newHeight = (int) (newWidth * ((1.0 * height) / width));
+		if ( height > width ) {
+			newWidth = 800;
+			newHeight = (int) (newWidth * ((1.0 * height) / width));
+		}
+		else {
+			newHeight = 800;
+			newWidth = (int) (newHeight * ((1.0 * width) / height));
+		}
 		log( "NEW: Height: " + newHeight + " Width: " + newWidth );
 
 		Dimension tDim = new Dimension( newWidth, newHeight );

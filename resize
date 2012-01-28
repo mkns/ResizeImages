@@ -2,4 +2,4 @@
 
 java -cp bin:lib/commons-lang-2.5.jar:lib/commons-cli-1.2.jar:. com.kennyscott.resizeimages.Resize -m $MONTH
 cd /Users/mkns/Pictures/www/
-rsync -vaz $MONTH/ $USERNAME@kennyscott.co.uk:/kunden/homepages/7/d163987848/htdocs/laurenscott.co.uk/$MONTH/
+rsync -vaz $MONTH/ $USERNAME@kennyscott.co.uk:/kunden/homepages/7/d163987848/htdocs/laurenscott.co.uk/photos/$MONTH/
